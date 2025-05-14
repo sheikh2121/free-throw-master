@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Throw Master</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Free Throw Master</h1>
+    
+    <div class="game-container">
+        <div class="court">
+            <div class="backboard"></div>
+            <div class="hoop"></div>
+            <div class="perfect-text">PERFECT!</div>
+            <div class="ball"></div>
+            <div class="player">
+                <div class="player-head"></div>
+                <div class="player-body"></div>
+            </div>
+        </div>
+        
+        <div class="power-meter">
+            <div class="target-zone"></div>
+            <div class="power-bar"></div>
+        </div>
+        
+        <div class="shot-result"></div>
+        
+        <button id="shoot-btn">HOLD TO SHOOT</button>
+        
+        <div class="stats">
+            <div>Shots Made: <span id="shots-made">0</span></div>
+            <div>Total Attempts: <span id="total-shots">0</span></div>
+            <div>Shooting %: <span id="shooting-percentage">0%</span></div>
+        </div>
+    </div>
+    
+    <div class="instructions">
+        <p><strong>How to play:</strong> Press and hold the button to charge your shot. Release within the green target zone for the best chance of making the basket!</p>
+    </div>
+    
+    <script src="js/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.game-container {
+    width: 320px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.court {
+    position: relative;
+    width: 280px;
+    height: 400px;
+    background-color: #cd5c5c;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.backboard {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 10px;
+    background-color: #fff;
+}
+
+.hoop {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border: 6px solid #ff6347;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.ball {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle at 20px 15px, #ff8c00, #e25822);
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+
+.player {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 100px;
+}
+
+.player-head {
+    width: 30px;
+    height: 30px;
+    background-color: #ffbb99;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.player-body {
+    width: 40px;
+    height: 60px;
+    background-color: #3498db;
+    border-radius: 8px;
+}
+
+.power-meter {
+    position: relative;
+    width: 280px;
+    height: 30px;
+    background-color: #eee;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.power-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(to right, #4CAF50, #FFEB3B, #FF5722);
+    transition: width 0.1s linear;
+}
+
+.target-zone {
+    position: absolute;
+    right: 25%;
+    left: 25%;
+    top: 0;
+    height: 100%;
+    background-color: rgba(0, 255, 0, 0.2);
+    border-left: 2px dashed #4CAF50;
+    border-right: 2px dashed #4CAF50;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+.stats {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.shot-result {
+    font-size: 24px;
+    font-weight: bold;
+    height: 30px;
+    margin: 10px 0;
+}
+
+.perfect-text {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ff6347;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.instructions {
+    margin: 20px auto;
+    max-width: 280px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+@keyframes success {
+    0% { transform: translateY(0) translateX(-50%); }
+    50% { transform: translateY(-150px) translateX(-50%); }
+    100% { transform: translateY(-200px) translateX(-50%); }
+}
+
+@keyframes miss {
+    0% { transform: translateY(0) translateX(-50%); }
+    50% { transform: translateY(-100px) translateX(-30px); }
+    100% { transform: translateY(-50px) translateX(-100px); }
+}
