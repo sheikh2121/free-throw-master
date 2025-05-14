@@ -28,11 +28,27 @@
         
         <div class="shot-result"></div>
         
+        <div class="shot-type-selector">
+            <button class="shot-type-btn active" data-type="free-throw">Free Throw</button>
+            <button class="shot-type-btn" data-type="three-point">Three Pointer</button>
+            <button class="shot-type-btn" data-type="layup">Layup</button>
+        </div>
+        
+        <div class="difficulty-selector">
+            <p><strong>Difficulty:</strong></p>
+            <div>
+                <button id="easy-btn" class="difficulty-btn">Easy</button>
+                <button id="normal-btn" class="difficulty-btn active">Normal</button>
+                <button id="hard-btn" class="difficulty-btn">Hard</button>
+            </div>
+        </div>
+        
         <button id="shoot-btn">HOLD TO SHOOT</button>
         
         <div class="stats">
             <div>Shots Made: <span id="shots-made">0</span></div>
             <div>Total Attempts: <span id="total-shots">0</span></div>
+            <div>Points: <span id="points">0</span></div>
             <div>Shooting %: <span id="shooting-percentage">0%</span></div>
         </div>
     </div>

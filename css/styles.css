@@ -189,6 +189,48 @@ th {
     background-color: #f2f2f2;
 }
 
+.shot-type-selector, .difficulty-selector {
+    margin: 15px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.difficulty-selector {
+    flex-direction: column;
+    align-items: center;
+}
+
+.difficulty-selector p {
+    margin: 5px 0;
+}
+
+.difficulty-selector div {
+    display: flex;
+    gap: 10px;
+}
+
+.shot-type-btn, .difficulty-btn {
+    background-color: #f0f0f0;
+    color: #333;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.shot-type-btn:hover, .difficulty-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.shot-type-btn.active, .difficulty-btn.active {
+    background-color: #3498db;
+    color: white;
+}
+
 @keyframes success {
     0% { transform: translateY(0) translateX(-50%); }
     50% { transform: translateY(-150px) translateX(-50%); }
